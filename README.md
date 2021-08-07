@@ -1,6 +1,6 @@
 # Neogcamp How well do you know me?
 
-[![NodeJS_brushed](https://img.shields.io/badge/ReactJS-brushed-pink)]() 
+[![NodeJS_brushed](https://img.shields.io/badge/NodeJS-brushed-pink)]() 
 [![Neog Camp](https://img.shields.io/badge/Neog-camp-brightgreen)]() 
 [![maintained yes](https://img.shields.io/badge/maintained-yes-blue)]() 
 
