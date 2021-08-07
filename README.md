@@ -5,4 +5,4 @@
 
 A simple CLI app build with Node.js.
 
-Share with your friends and know who knows you better. :shake-hand:
+Share with your friends and know who knows you better. 🤝
