@@ -10,31 +10,40 @@ var score=0;
 var questions=[
   {
     question:"Where do I live? ",
-    answer:"Gorakhpur"
+    options:["Gorakhpur","Pune","Assam","Punjab"],
+    answer:0
   },
   {
     question:"Where do i study? ",
-    answer:"JSS"
+    options:["Gorakhpur","Noida","Bangalore","Pune"],
+    answer:1
   },
   {
     question:"What is my fav colour? ",
-    answer:"Black"
+    options:["Red","Blue","Black","Pink"],
+    answer:2
   },
   {
     question:"What would be my favourite pet? ",
-    answer:"Dog"
+    options:["Snakes","Rabbit","Cat","Dog"],
+    answer:3
 
   },
   {
     question:"Which is my favourite movie?  ",
-    answer:"RHTDM"
+     options:["2 states","RHTDM","Bajrangi Bhaijaan","SherShah"],
+    answer:1
   }
 
 ];
 
-function play(question,answer){
-  var userAnswer=readlineSync.question(question);
-  if(userAnswer.toUpperCase()===answer.toUpperCase()){
+function play(question,options,answer){
+  var optionString=""
+  options.forEach((option,index)=>{ 
+    optionString+=`\n${index}. ${option}`
+  })
+  var userAnswer=readlineSync.question(`${question}${optionString}\nEnter the option number:`);
+  if(userAnswer===answer.toString()){
     console.log("Right!");
     score++;
   }
@@ -46,7 +55,7 @@ function play(question,answer){
 }
 
 for(var i=0;i<questions.length;i++){
-  play(questions[i].question,questions[i].answer)
+  play(questions[i].question,questions[i].options,questions[i].answer)
   
 }
 
@@ -61,6 +70,6 @@ function scoreMessage(score){
     console.log("You need to know more ")
   }
   else{
-    console.log("You dont kow me!")
+    console.log("You dont know me!")
   }
 }
